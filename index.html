@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="SkyCast city weather dashboard">
+    <title>SkyCast — Live Weather Forecast Portal</title>
+    <link rel="icon" href="icons/sky.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body id="home">
+    <header>
+        <div class="wrap bar"><a class="brand" href="#home"><img src="icons/sky.svg" alt="">SkyCast</a><button id="menu"
+                aria-expanded="false" aria-controls="nav">Menu</button>
+            <nav id="nav" aria-label="Main"><a href="#home">Home</a><a href="#forecast">Forecast</a><a
+                    href="#about">About</a></nav>
+            <form id="search" role="search"><input id="city" aria-label="City name" placeholder="Search a city…"
+                    required maxlength="100" type="search"><button>Search</button></form>
+        </div>
+    </header>
+    <main class="wrap">
+        <div class="intro">
+            <div>
+                <p class="eyebrow">SKYCAST / WEATHER PORTAL</p>
+                <h1>Weather dashboard</h1>
+                <p>Current conditions and the forecast ahead, wherever you’re headed.</p>
+            </div><button id="loc" class="outline">◎ Use my location</button>
+        </div>
+        <div class="recent" id="recent" aria-label="Recent searches"></div>
+        <div id="choices" class="recent" aria-label="Matching cities"></div>
+        <p id="status" role="status"></p>
+        <section id="hero" class="hero" aria-label="Current weather">
+            <div>
+                <p class="eyebrow">● &nbsp; CURRENT CONDITIONS</p>
+                <h2 id="place">Karachi, Pakistan</h2>
+                <p>Waiting for weather data…</p>
+            </div>
+        </section>
+        <section aria-labelledby="details-title">
+            <div class="heading">
+                <h2 id="details-title">Weather details</h2><span>AT A GLANCE</span>
+            </div>
+            <div id="details" class="details"></div>
+        </section>
+        <section id="forecast">
+            <div class="heading">
+                <h2>Hourly forecast</h2><span>NEXT 24 HOURS · LOCAL TIME</span>
+            </div>
+            <div id="hourly" class="hours" tabindex="0" aria-label="Scrollable hourly forecast"></div>
+            <div class="heading">
+                <h2>7-day forecast</h2><span>DAILY OUTLOOK</span>
+            </div>
+            <div id="daily" class="days"></div>
+        </section>
+        <section id="about" class="about">
+            <p class="eyebrow">ABOUT SKYCAST</p>
+            <h2>Weather, wherever you are.</h2>
+            <p>SkyCast helps you stay informed about current weather conditions and upcoming forecasts. Explore
+                real-time weather information for cities around the world through reliable weather data.</p>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap foot">
+            <div><a class="brand" href="#home"><img src="icons/sky.svg" alt="">SkyCast</a>
+                <p>City weather and forecasts in one place.</p>
+            </div>
+            <nav aria-label="Footer"><a href="#forecast">Forecast</a><a href="#about">About</a><a
+                    href="https://open-meteo.com/">Data: Open-Meteo</a><a href="#home">↑ Back to top</a></nav><small>©
+                <span id="year"></span> SkyCast</small>
+        </div>
+    </footer>
+</body>
+
+</html>
